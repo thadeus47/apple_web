@@ -10,7 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 function Model(props) {
-  const { nodes, materials } = useGLTF('/scene.glb')
+  const { nodes, materials } = useGLTF('/models/scene.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -95,7 +95,23 @@ function Model(props) {
         receiveShadow
         geometry={nodes.pvdHknDTGDzVpwc.geometry}
         material={materials.xdyiJLYTYRfJffH}
-        scale={0.01}
+        scale={0.01}types
+        shadows
+        instance
+        instance all
+        verbose
+        keep names
+        keep groups
+        meta
+        precision
+        path prefix
+        autoRotate
+        contactShadow
+        light intensity
+        preset
+        rembrandt
+        environment
+        city
       />
       <mesh
         castShadow
@@ -235,4 +251,6 @@ function Model(props) {
 }
 
 export default Model;
-useGLTF.preload('/scene.glb')
+useGLTF.preload('/models/scene.glb')
+
+
